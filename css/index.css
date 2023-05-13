@@ -192,7 +192,7 @@ body {
 
 .foto {
   position: relative;
-  background-image: url(/img/foto.jpg);
+  background-image: url(../img/foto.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -410,7 +410,7 @@ body {
 
 .foto__educacion {
   position: relative;
-  background-image: url(/img/educacion.jpg);
+  background-image: url(../img/educacion.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -534,47 +534,47 @@ body {
 }
 
 .imagen__proyecto.uno {
-  background-image: url(/img/poyoUsuarios.PNG);
+  background-image: url(../img/poyoUsuarios.PNG);
 }
 
 .imagen__proyecto.dos {
-  background-image: url(/img/personajesLoL.PNG);
+  background-image: url(../img/personajesLoL.PNG);
 }
 
 .imagen__certificado.uno {
-  background-image: url(/img/azure900.PNG);
+  background-image: url(../img/azure900.PNG);
 }
 
 .imagen__certificado.dos {
-  background-image: url(/img/cibersecurity.PNG);
+  background-image: url(../img/cibersecurity.PNG);
 }
 
 .imagen__certificado.tres {
-  background-image: url(/img/database.PNG);
+  background-image: url(../img/database.PNG);
 }
 
 .imagen__certificado.cuatro {
-  background-image: url(/img/IA.PNG);
+  background-image: url(../img/IA.PNG);
 }
 
 .imagen__certificado.cinco {
-  background-image: url(/img/bigdata.PNG);
+  background-image: url(../img/bigdata.PNG);
 }
 
 .imagen__certificado.seis {
-  background-image: url(/img/javaFX.PNG);
+  background-image: url(../img/javaFX.PNG);
 }
 
 .imagen__certificado.siete {
-  background-image: url(/img/laravel.PNG);
+  background-image: url(../img/laravel.PNG);
 }
 
 .imagen__certificado.ocho {
-  background-image: url(/img/python.PNG);
+  background-image: url(../img/python.PNG);
 }
 
 .imagen__certificado.nueve {
-  background-image: url(/img/seguridadInformatica.PNG);
+  background-image: url(../img/seguridadInformatica.PNG);
 }
 
 
