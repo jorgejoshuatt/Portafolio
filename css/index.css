@@ -158,12 +158,13 @@ body {
 }
 
 .cuerpo.sobre__mi {
-  height: 60%;
+  height: 55%;
   align-items: center;
   justify-content: space-between;
   padding-left: 5.5%;
   padding-right: 7.5%;
   transition: all 150ms;
+
 }
 
 .descripcion__contenedor {
@@ -186,6 +187,7 @@ body {
   text-shadow: 0px 1px 0px black;
   font-weight: bold;
   text-align: justify;
+  width: 98%;
 }
 
 .foto {
@@ -195,44 +197,48 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   mix-blend-mode: hard-light;
+  filter: grayscale(100%);
   width: 22%;
   height: 85%;
   transition: all 150ms;
 }
+
 .foto:hover {
   transform: scale(1.075);
-  box-shadow: 0 0 50px #f1c40f;
+  /*box-shadow: 0 0 50px #f1c40f;*/
+  filter: none;
   mix-blend-mode: normal;
-  cursor: pointer;
 }
 
 .foto::after,
 .foto::before {
   content: " ";
-  width: 101%;
-  height: 3.5%;
+  width: 97%;
+  height: 1.35%;
   position: absolute;
   border: 0px solid #fff;
 }
+
 .foto::after {
   border-radius: 5px 5px 0 0;
-  top: -7.85px;
-  left: -5.75px;
-  border-top: 4px solid white;
-  border-left: 4px solid white;
-  border-right: 4px solid white;
+  top: -6px;
+  left: 2.5px;
+  border-top: 3.5px solid white;
+  border-left: 3.5px solid white;
+  border-right: 3.5px solid white;
 }
+
 .foto::before {
   border-radius: 0 0 5px 5px;
-  bottom: -7.85px;
-  left: -5.75px;
-  border-bottom: 4px solid white;
-  border-right: 4px solid white;
-  border-left: 4px solid white;
+  bottom: -6px;
+  left: 2.5px;
+  border-bottom: 3.5px solid white;
+  border-right: 3.5px solid white;
+  border-left: 3.5px solid white;
 }
 
 .cuerpo.habilidades {
-  height: 60%;
+  height: 55%;
   align-items: center;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.325);
@@ -257,30 +263,32 @@ body {
   border-radius: 15%;
   width: 21.5%;
   height: 50%;
+  animation: flotar 4.5s ease-out infinite;
 }
 
-.imagen__habilidad.java {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg);
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
-.imagen__habilidad.python {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg);
-}
-.imagen__habilidad.html {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg);
-}
-.imagen__habilidad.css {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg);
-}
-.imagen__habilidad.javascript {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg);
-}
-.imagen__habilidad.sql {
-  background-image: url(https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg);
-}
+
 .imagen__habilidad:hover {
-  transform: scale(1.1);
-  mix-blend-mode: normal;
+  animation: ampliar 0.3s ease forwards;
   cursor: pointer;
+}
+
+@keyframes ampliar {
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .nombre__habilidad {
@@ -297,7 +305,7 @@ body {
 }
 
 .cuerpo.portafolio {
-  height: 60%;
+  height: 55%;
   align-items: center;
   justify-content: space-between;
   padding-left: 5.5%;
@@ -325,6 +333,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .opcion:hover {
   transform: scale(1.075);
   mix-blend-mode: normal;
@@ -339,6 +348,7 @@ body {
   position: absolute;
   border: 0px solid #fff;
 }
+
 .opcion::after {
   border-radius: 5px 5px 0 0;
   top: -4px;
@@ -347,6 +357,7 @@ body {
   border-left: 2.5px solid white;
   border-right: 2.5px solid white;
 }
+
 .opcion::before {
   border-radius: 0 0 5px 5px;
   bottom: -4px;
@@ -368,10 +379,11 @@ body {
   height: 95%;
   display: flex;
   align-items: center;
+
 }
 
-.descripcion.educacion{
-    display: none;
+.descripcion.educacion {
+  display: none;
 }
 
 .descripcion.educacion.active {
@@ -383,12 +395,17 @@ body {
   color: white;
   text-align: justify;
   font-weight: bold;
+
 }
 
 .texto__educacion {
   padding-left: 2.5%;
   padding-right: 2.5%;
   text-shadow: 0px 1px 0px black;
+  background-color: rgba(0, 0, 0, 0.325);
+  width: 90%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .foto__educacion {
@@ -398,42 +415,46 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   mix-blend-mode: hard-light;
+  filter: grayscale(100%);
   border-radius: 3px;
   width: 30%;
   height: 50%;
 }
 
 .foto__educacion:hover {
-    transform: scale(1.075);
-    box-shadow: 0 0 50px #f1c40f;
-    mix-blend-mode: normal;
-    cursor: pointer;
-  }
-  
-  .foto__educacion::after,
-  .foto__educacion::before {
-    content: " ";
-    width: 101%;
-    height: 3.5%;
-    position: absolute;
-    border: 0px solid #fff;
-  }
-  .foto__educacion::after {
-    border-radius: 5px 5px 0 0;
-    top: -5px;
-    left: -5px;
-    border-top: 2.5px solid white;
-    border-left: 2.5px solid white;
-    border-right: 2.5px solid white;
-  }
-  .foto__educacion::before {
-    border-radius: 0 0 5px 5px;
-    bottom: -5px;
-    left: -5px;
-    border-bottom: 2.5px solid white;
-    border-right: 2.5px solid white;
-    border-left: 2.5px solid white;
-  }
+  transform: scale(1.075);
+  /*box-shadow: 0 0 50px #f1c40f;*/
+  mix-blend-mode: normal;
+  filter: none;
+  cursor: pointer;
+}
+
+.foto__educacion::after,
+.foto__educacion::before {
+  content: " ";
+  width: 97%;
+  height: 3.5%;
+  position: absolute;
+  border: 0px solid #fff;
+}
+
+.foto__educacion::after {
+  border-radius: 5px 5px 0 0;
+  top: -5px;
+  left: 3.5px;
+  border-top: 2.5px solid white;
+  border-left: 2.5px solid white;
+  border-right: 2.5px solid white;
+}
+
+.foto__educacion::before {
+  border-radius: 0 0 5px 5px;
+  bottom: -5px;
+  left: 3.5px;
+  border-bottom: 2.5px solid white;
+  border-right: 2.5px solid white;
+  border-left: 2.5px solid white;
+}
 
 .progress-bar {
   width: 50%;
@@ -456,13 +477,266 @@ body {
   from {
     width: 0%;
   }
+
   to {
     width: 90%;
   }
 }
 
+.descripcion.proyectos {
+  display: none;
+}
+
+.descripcion.proyectos.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.principal__slider {
+  margin: auto;
+  width: 95%;
+  height: 95%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido__slider,
+.contenido__slider__certificados {
+  display: none;
+}
+
+.contenido__slider.active,
+.contenido__slider__certificados.active {
+  margin-top: 1%;
+  height: 82%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item__slider {
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.325);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.5%;
+}
+
+.imagen__proyecto.uno {
+  background-image: url(/img/poyoUsuarios.PNG);
+}
+
+.imagen__proyecto.dos {
+  background-image: url(/img/personajesLoL.PNG);
+}
+
+.imagen__certificado.uno {
+  background-image: url(/img/azure900.PNG);
+}
+
+.imagen__certificado.dos {
+  background-image: url(/img/cibersecurity.PNG);
+}
+
+.imagen__certificado.tres {
+  background-image: url(/img/database.PNG);
+}
+
+.imagen__certificado.cuatro {
+  background-image: url(/img/IA.PNG);
+}
+
+.imagen__certificado.cinco {
+  background-image: url(/img/bigdata.PNG);
+}
+
+.imagen__certificado.seis {
+  background-image: url(/img/javaFX.PNG);
+}
+
+.imagen__certificado.siete {
+  background-image: url(/img/laravel.PNG);
+}
+
+.imagen__certificado.ocho {
+  background-image: url(/img/python.PNG);
+}
+
+.imagen__certificado.nueve {
+  background-image: url(/img/seguridadInformatica.PNG);
+}
+
+
+.imagen__proyecto,
+.imagen__certificado {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 95%;
+  height: 46%;
+  filter: grayscale(100%);
+}
+
+.imagen__proyecto:hover,
+.imagen__certificado:hover {
+  transform: scale(1.050);
+  /*box-shadow: 0 0 50px #f1c40f;*/
+  mix-blend-mode: normal;
+  filter: none;
+  cursor: pointer;
+}
+
+.imagen__proyecto::after,
+.imagen__proyecto::before,
+.imagen__certificado::after,
+.imagen__certificado::before {
+  content: " ";
+  width: 96%;
+  height: 3%;
+  position: absolute;
+  border: 0px solid #fff;
+}
+
+.imagen__proyecto::after,
+.imagen__certificado::after {
+  border-radius: 5px 5px 0 0;
+  top: -5px;
+  left: 4.5px;
+  border-top: 2.5px solid white;
+  border-left: 2.5px solid white;
+  border-right: 2.5px solid white;
+}
+
+.imagen__proyecto::before,
+.imagen__certificado::before {
+  border-radius: 0 0 5px 5px;
+  bottom: -5px;
+  left: 4.5px;
+  border-bottom: 2.5px solid white;
+  border-right: 2.5px solid white;
+  border-left: 2.5px solid white;
+}
+
+.texto__proyecto,
+.texto__certificado {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 1px 0px black;
+  font-weight: bold;
+  text-align: justify;
+  height: 30%;
+  margin: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.menu__slider {
+  height: 10%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.opcion__slider,
+.opcion__slider__certificados {
+  color: white;
+  text-shadow: 0px 1px 0px black;
+  font-weight: bold;
+  background-color: grey;
+  height: 100%;
+  width: 22.5%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opcion__slider:hover,
+.opcion__slider__certificados:hover {
+  background-color: white;
+  color: black;
+  text-shadow: 0px 1px 0px white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.opcion__slider.active,
+.opcion__slider__certificados.active {
+  background-color: white;
+  color: black;
+  text-shadow: 0px 1px 0px white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.descripcion.certificaciones {
+  display: none;
+}
+
+.descripcion.certificaciones.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.descripcion.cv {
+  display: none;
+}
+
+.descripcion.cv.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.download__cv {
+  text-decoration: none;
+  border-color: rgb(215, 215, 215);
+  border: 3.5px;
+  border-style: solid;
+  color: rgb(215, 215, 215);
+  text-shadow: 0px 1px 0px black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 10%;
+  transition: all 150ms;
+  cursor: pointer;
+}
+
+.download__cv:hover {
+  transform: scale(1.075);
+  border-color: white;
+  color: white;
+  box-shadow: 0 0 2.5px white;
+}
+
+a {
+  width: auto;
+  height: auto;
+}
+
 .cuerpo.contacto {
-  height: 60%;
+  height: 55%;
   align-items: center;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.325);
@@ -474,9 +748,97 @@ body {
   height: 10%;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.contenedor__hobbies {
+  display: flex;
   align-items: center;
-  padding-top: 0.25%;
+  overflow: hidden;
+  height: 90%;
+  width: 40%;
+  position: relative;
+  margin-left: 0.5%;
+  margin-top: 0.5%;
+}
+
+.pacman {
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+.pacman::before,
+.pacman::after {
+  position: absolute;
+  top: -35px;
+  display: block;
+  border-radius: 50%;
+  content: "";
+  height: 0px;
+  width: 0px;
+}
+
+.pacman::before {
+  animation: boca-top .5s ease infinite;
+  border: 35px solid #FFCC00;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.pacman::after {
+  animation: boca-bottom .5s ease infinite;
+  border: 35px solid #FFCC00;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.comida {
+  animation: comiendo 15s linear infinite;
+  position: absolute;
+  padding-left: 10px;
+}
+
+.comida span {
+  color: white;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+
+@keyframes boca-top {
+
+  0%,
+  100% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes boca-bottom {
+
+  0%,
+  100% {
+    transform: rotate(-40deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes comiendo {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .pie__info {
@@ -522,6 +884,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3.5%;
+  margin-left: 1.5%;
 }
 
 .pie__info .icon {
