@@ -17,10 +17,10 @@
       <div class="carrusel__contenedor">
         <div class="flecha izquierda" id="flecha__izquierda">&lt;</div>
         <div class="carrusel">
-          <div class="item sobre__mi">SOBRE MI</div>
-          <div class="item habilidades">HABILIDADES</div>
-          <div class="item portafolio">PORTAFOLIO</div>
-          <div class="item contacto">CONTACTO</div>
+          <div class="item sobre__mi" onclick="location.href='#sobre__mi';">SOBRE MI</div>
+          <div class="item habilidades"  onclick="location.href='#habilidades';">HABILIDADES</div>
+          <div class="item portafolio" onclick="location.href='#portafolio';">PORTAFOLIO</div>
+          <div class="item contacto" onclick="location.href='#contacto';">CONTACTO</div>
         </div>
         <div class="flecha derecha" id="flecha__derecha">&gt;</div>
       </div>
@@ -33,7 +33,7 @@
         <div class="info__estado">ONLINE</div>
       </div>
     </div>
-    <div class="cuerpo sobre__mi">
+    <div class="cuerpo sobre__mi" id="sobre__mi">
       <div class="descripcion__contenedor">
         <div class="descripcion__nombre">
           <h1>JORGE JOSHUA TREJO MARTINEZ</h1>
@@ -53,7 +53,7 @@
       </div>
       <div class="foto"></div>
     </div>
-    <div class="cuerpo habilidades">
+    <div class="cuerpo habilidades" id="habilidades">
       <div class="habilidad java">
         <a class="imagen__habilidad java" href="https://www.oracle.com/java/">
           <img
@@ -139,7 +139,7 @@
         </div>
       </div>
     </div>
-    <div class="cuerpo portafolio">
+    <div class="cuerpo portafolio" id="portafolio">
       <div class="menu__portafolio">
         <div class="opcion educacion">EDUCACIÓN</div>
         <div class="opcion proyectos">PROYECTOS</div>
@@ -306,7 +306,24 @@
         </div>
       </div>
     </div>
-    <div class="cuerpo contacto"></div>
+    <div class="cuerpo contacto" id="contacto">
+     <form class="form__contacto" action="https://formsubmit.co/joshuatrejo18@aragon.unam.mx" method="POST">
+      <h2>Contacto</h2>
+      <div class="datos__entrada">
+        <label class="label__form" for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre...">
+        <label class="label__form" for="telefono">Teléfono</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono...">
+        <label class="label__form" for="correo">Correo</label>
+        <input type="email" name="correo" id="correo" placeholder="Escribe tu correo...">
+        <label class="label__form" for="mensaje">Déjame un mensaje</label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+        <input class="boton__enviar" type="submit" value="ENVIAR">
+        <input type="hidden" name="_next" value="https://jorgejoshuatt.github.io/Portafolio/#contacto">
+        <input type="hidden" name="_captcha" value="false">
+      </div>
+     </form> 
+    </div>
     <div class="pie">
       <div class="contenedor__hobbies">
         <div class="pacman"></div>
