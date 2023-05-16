@@ -1,11 +1,11 @@
 const items = document.querySelectorAll('.item');
 const cuerpos = document.querySelectorAll('.cuerpo');
 var anclaje = window.location.hash.substring(1);
-if (anclaje=='') {
-  anclaje='sobre__mi';
+if (anclaje == '') {
+  anclaje = 'sobre__mi';
 }
-const sobreMi = document.querySelector('.'+anclaje);
-const cuerpoSobreMi = document.querySelector('.cuerpo.'+anclaje);
+const sobreMi = document.querySelector('.' + anclaje);
+const cuerpoSobreMi = document.querySelector('.cuerpo.' + anclaje);
 sobreMi.classList.add('active');
 cuerpoSobreMi.classList.add('active');
 items.forEach((item, index) => {

@@ -747,7 +747,7 @@ a {
   font-weight: bold;
 }
 
-.form__contacto{
+.form__contacto {
   height: 78%;
   width: 50%;
   padding: 2.5%;
@@ -758,17 +758,18 @@ a {
   flex-direction: column;
 }
 
-.datos__entrada{
+.datos__entrada {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.label__form{
+.label__form {
   margin-bottom: 0.5%;
 }
 
-input, textarea{
+input,
+textarea {
   padding: 1.5% 2%;
   margin-bottom: 1.75%;
   border: 3.5px solid white;
@@ -777,21 +778,22 @@ input, textarea{
   color: white;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: white;
 }
 
-.boton__enviar{
+.boton__enviar {
   color: rgb(255, 255, 255);
   text-shadow: 0px 1px 0px black;
   font-weight: bold;
 }
 
-.boton__enviar:hover{
+.boton__enviar:hover {
   background-color: white;
   color: rgba(0, 0, 0, 0.65);
   text-shadow: none;
-  cursor:pointer;
+  cursor: pointer;
   transform: scale(1.050);
 }
 
