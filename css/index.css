@@ -173,8 +173,7 @@ body {
 }
 
 .descripcion__contenedor {
-  width: 40%;
-  height: 75%;
+  width: 45%;
   background-color: rgba(0, 0, 0, 0.325);
   padding-left: 1%;
   padding-right: 1%;
@@ -311,9 +310,7 @@ body {
 .cuerpo.portafolio {
   height: 55%;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 5.5%;
-  padding-right: 3.5%;
+  justify-content: space-evenly;
   transition: all 150ms;
 }
 
@@ -339,7 +336,7 @@ body {
 }
 
 .opcion:hover {
-  transform: scale(1.075);
+  transform: scale(1.025);
   mix-blend-mode: normal;
   cursor: pointer;
 }
@@ -503,7 +500,7 @@ body {
 
 .principal__slider {
   margin: auto;
-  width: 95%;
+  width: 99%;
   height: 95%;
   box-sizing: border-box;
   display: flex;
@@ -640,7 +637,6 @@ body {
   text-shadow: 0px 1px 0px black;
   font-weight: bold;
   text-align: justify;
-  height: 30%;
   margin: 5%;
   display: flex;
   align-items: center;
@@ -648,7 +644,7 @@ body {
 
 .menu__slider {
   height: 7.5%;
-  width: 17.5%;
+  width: 17%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -751,7 +747,7 @@ body {
 
 .form__contacto {
   height: 78%;
-  width: 50%;
+  width: 65%;
   padding: 2.5%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.325);
   text-align: center;
@@ -772,9 +768,9 @@ body {
 
 input,
 textarea {
-  padding: 1.5% 2%;
+  padding: 1% 2%;
   margin-bottom: 1.75%;
-  border: 3.5px solid white;
+  border: 2px solid white;
   background-color: transparent;
   outline: none;
   color: white;
@@ -1056,13 +1052,18 @@ textarea::placeholder {
   .pie__info .icon .tooltip {
     font-size: 12px;
   }
+
   .menu__slider {
     width: 45%;
   }
 
+  .descripcion__contenedor {
+    width: 50%;
+  }
+
   .foto {
-    width: 45%;
-    height: 45%;
+    width: 35.5%;
+    height: 50%;
   }
 
   .foto::after {
@@ -1092,8 +1093,9 @@ textarea::placeholder {
 
   .imagen__proyecto,
   .imagen__certificado {
-    height: 12.5%;
-    width: 80%;
+    height: 27.5%;
+    width: 70%;
+    margin-bottom: 10%;
   }
 
   .imagen__proyecto::after,
@@ -1105,9 +1107,24 @@ textarea::placeholder {
   .imagen__certificado::before {
     left: 0px;
   }
+
   .item__slider {
     height: 60%;
   }
+
+  .form__contacto {
+    width: 90%;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 5%;
+  }
+
+  .label__form {
+    margin-bottom: 1.5%;
+  }
+
 }
 
 /* Estilos para dispositivos móviles */
@@ -1132,10 +1149,6 @@ textarea::placeholder {
     width: 71%;
   }
 
-  .pie__info .icon span i {
-    font-size: 12px;
-  }
-
   .pie__info .icon .tooltip {
     font-size: 8px;
   }
@@ -1149,7 +1162,7 @@ textarea::placeholder {
   }
 
   .menu__slider {
-    width: 70%;
+    width: 50%;
   }
 
   .foto {
@@ -1170,8 +1183,8 @@ textarea::placeholder {
   }
 
   .foto__educacion {
-    width: 45%;
-    height: 21.5%;
+    width: 50%;
+    height: 30%;
   }
 
   .foto__educacion::after {
@@ -1184,8 +1197,9 @@ textarea::placeholder {
 
   .imagen__proyecto,
   .imagen__certificado {
-    height: 12.5%;
-    width: 80%;
+    height: 27.5%;
+    width: 70%;
+    margin-bottom: 10%;
   }
 
   .imagen__proyecto::after,
@@ -1197,7 +1211,51 @@ textarea::placeholder {
   .imagen__certificado::before {
     left: 0px;
   }
+
   .item__slider {
     height: 60%;
+    width: 32.5%;
+  }
+
+  .form__contacto {
+    width: 90%;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 7.5%;
+  }
+
+  .label__form {
+    margin-bottom: 1.5%;
+  }
+
+  .descripcion__contenedor {
+    width: 50%;
+  }
+
+  .menu__portafolio {
+    height: 35%;
+    width: 22.5%;
+  }
+
+  .descripcion__portafolio {
+    height: 70%;
+    width: 72.5%;
+  }
+
+  .pie__info .icon span {
+    height: 3vh;
+    width: 3vh;
+  }
+
+  .pie__info .icon span i {
+    line-height: 3vh;
+    font-size: 12px;
+  }
+
+  .icon {
+    padding-left: 0%;
+    border-left: 0px;
   }
 }
